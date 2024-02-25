@@ -54,8 +54,9 @@ class WFMaterial {
       this.illum});
 
   /// 画像ファイルを読み込みます。
-  static Future<Uint8List> _readFileBytes(String filePath) async {
-    ByteData bd = await rootBundle.load(filePath);
+  static Future<Uint8List> _readFileBytes(
+      String basePath, String fileName) async {
+    ByteData bd = await rootBundle.load(basePath + fileName);
     return bd.buffer.asUint8List(bd.offsetInBytes, bd.lengthInBytes);
   }
 
@@ -110,7 +111,7 @@ class WFMaterial {
       // 画像データ
       else if (line.startsWith('${e[8]} ')) {
         try {
-          mtl[e[8]] = await _readFileBytes(line.split(' ')[1]);
+          mtl[e[8]] = await _readFileBytes(basePath, line.split(' ')[1]);
         } catch (e) {
           debugPrint(e.toString());
         }

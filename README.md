@@ -10,7 +10,7 @@ Please note that this project has low priority.
 
 ## How to Use
 ### Related packages
-This package is intended to make the following packages easier to use.
+This package is intended to make the following packages easier to use.  
 [simple_3d](https://pub.dev/packages/simple_3d)
 
 ### Converting .obj files to Sp3dObj
