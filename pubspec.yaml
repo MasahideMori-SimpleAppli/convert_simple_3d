@@ -1,6 +1,6 @@
 name: convert_simple_3d
 description: A project for converting between simple_3d objects and other 3d formats.
-version: 0.0.2
+version: 0.0.3
 repository: https://github.com/MasahideMori-SimpleAppli/convert_simple_3d
 
 environment:
@@ -10,8 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  simple_3d: ^13.1.1
-  simple_3d_renderer: ^19.1.0
+  simple_3d: ^14.0.1
+  simple_3d_renderer: ^20.0.1
 
 dev_dependencies:
   flutter_test:
