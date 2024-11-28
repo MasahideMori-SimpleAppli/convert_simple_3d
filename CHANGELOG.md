@@ -1,3 +1,7 @@
+## 0.0.4
+
+* Updates associated with base library updates.
+
 ## 0.0.3
 
 * Updates associated with base library updates.
