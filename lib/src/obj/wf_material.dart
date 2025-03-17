@@ -173,8 +173,12 @@ class WFMaterial {
           name: name,
           // 変換専用情報
           option: {
-            "ka": ka?.value.toRadixString(16),
-            "ks": ks?.value.toRadixString(16),
+            "ka": ka != null
+                ? UtilColorForSp3dConverter.colorToHexString(ka!)
+                : null,
+            "ks": ks != null
+                ? UtilColorForSp3dConverter.colorToHexString(ks!)
+                : null,
             "ns": ns,
             "d": d,
             "tr": tr,

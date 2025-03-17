@@ -17,4 +17,17 @@ class UtilColorForSp3dConverter {
     return Color.fromRGBO(
         (r * 255).toInt(), (g * 255).toInt(), (b * 255).toInt(), o);
   }
+
+  /// (en) Returns the color converted to a hexadecimal #AARRGGBB string.
+  ///
+  /// (ja) Colorを16進数の#AARRGGBB形式のテキストに変換して返します。
+  ///
+  /// * [color] : The color you want to convert.
+  static String colorToHexString(Color color) {
+    return '#${(color.a * 255).round().toRadixString(16).padLeft(2, '0')}' // Alpha
+            '${(color.r * 255).round().toRadixString(16).padLeft(2, '0')}' // Red
+            '${(color.g * 255).round().toRadixString(16).padLeft(2, '0')}' // Green
+            '${(color.b * 255).round().toRadixString(16).padLeft(2, '0')}'
+        .toUpperCase(); // Blue
+  }
 }
