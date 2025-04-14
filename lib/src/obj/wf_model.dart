@@ -1,3 +1,4 @@
+import 'package:convert_simple_3d/src/util/string_cleanup.dart';
 import 'package:flutter/services.dart';
 import 'package:simple_3d/simple_3d.dart';
 
@@ -25,13 +26,16 @@ class WFModel {
   /// * [mode] : Loading mode.
   static Future<WFModel> fromStr(
       String basePath, String objFileName, WFLoadingMode mode) async {
-    final String objStr = await rootBundle.loadString(basePath + objFileName);
+    // clean the input
+    final String objStr =
+        (await rootBundle.loadString(basePath + objFileName)).clean();
+
     WFModel r = WFModel();
     String? materialName;
     final List<String> lines = objStr.split("\n");
     for (String line in lines) {
-      // trim line, collapse multiple whitespaces
-      line = line.trim().replaceAll(RegExp(r'\s+'), ' ');
+      // remove leading and trailing whitespaces
+      line = line.trim();
 
       // コメント行または空行のスキップ
       if (line == "" || line.startsWith('#')) {
@@ -136,11 +140,16 @@ class WFModel {
   /// (ja) mtlファイルの内部設定を読み込んで返します。
   static Future<List<WFMaterial>> _mtlMapping(
       String basePath, String mtlFileName) async {
-    final String mtlStr = await rootBundle.loadString(basePath + mtlFileName);
+    final String mtlStr =
+        (await rootBundle.loadString(basePath + mtlFileName)).clean();
+
     List<WFMaterial> r = [];
     final List<String> sList = mtlStr.split('\n');
     List<String> buf = [];
     for (String l in sList) {
+      // remove leading and trailing whitespaces
+      l = l.trim();
+
       // コメント行及び空行のスキップ
       if (l == "" || l.startsWith('#')) {
         continue;
