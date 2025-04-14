@@ -30,6 +30,9 @@ class WFModel {
     String? materialName;
     final List<String> lines = objStr.split("\n");
     for (String line in lines) {
+      // trim line, collapse multiple whitespaces
+      line = line.trim().replaceAll(RegExp(r'\s+'), ' ');
+
       // コメント行または空行のスキップ
       if (line == "" || line.startsWith('#')) {
         continue;
