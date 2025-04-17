@@ -1,6 +1,6 @@
 name: convert_simple_3d
 description: A project for converting between simple_3d objects and other 3d formats.
-version: 0.0.5
+version: 0.0.6
 repository: https://github.com/MasahideMori-SimpleAppli/convert_simple_3d
 
 environment:
