@@ -1,3 +1,8 @@
+## 0.0.6
+
+* Updated about [issue 1](https://github.com/MasahideMori-SimpleAppli/convert_simple_3d/issues/1).
+* One file name was still old, so I fixed it. This change does not normally affect imports.
+
 ## 0.0.5
 
 * Updates associated with base library updates.

@@ -1,6 +1,6 @@
 extension StringCleanup on String {
   /// Cleans this String in one go,
-  /// removing \r characters (Widows line breaks)
+  /// removing \r characters (Windows line breaks)
   /// and replacing multiple whitespaces with single ones.
   String clean() => replaceAllMapped(
         RegExp(r'\r| +'),
