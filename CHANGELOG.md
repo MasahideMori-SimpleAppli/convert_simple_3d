@@ -1,3 +1,8 @@
+## 0.0.7
+
+* Updates associated with base library updates.
+* Since simple_3d_renderer was only used in the examples, it has been moved to dev_dependencies.
+
 ## 0.0.6
 
 * Updated about [issue 1](https://github.com/MasahideMori-SimpleAppli/convert_simple_3d/issues/1).
