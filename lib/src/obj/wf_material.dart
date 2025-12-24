@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:simple_3d/simple_3d.dart';
-
-import '../../convert_simple_3d.dart';
+import 'package:convert_simple_3d/convert_simple_3d.dart';
 
 ///
 /// (en) This is a class for handling mtl files (material files).

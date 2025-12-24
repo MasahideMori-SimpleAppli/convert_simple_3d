@@ -1,3 +1,8 @@
+## 0.0.8
+
+* Updates associated with base library updates.
+* Minor internal refactoring without API changes.
+
 ## 0.0.7
 
 * Updates associated with base library updates.
