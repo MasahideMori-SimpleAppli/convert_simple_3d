@@ -1,3 +1,7 @@
+## 0.0.10
+
+* Adjustments following updates in the base library (no significant behavior changes).
+
 ## 0.0.9
 
 * Updates associated with base library updates (no significant behavior change).
